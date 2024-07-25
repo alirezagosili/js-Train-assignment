@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #e74c3c;
+  --accent-color: #3498db;
+  --background-color: #ecf0f1;
+  --text-color: #34495e;
+  --white: #ffffff;
+}
+  
+  body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .main {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .header h1 {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin: 0 0 10px 0;
+  }
+  
+  #day {
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin: 0;
+  }
+  
+  #notice {
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  #timeRemaining {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 30px 0;
+    text-align: center;
+    letter-spacing: -1px;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-class-name {
+    --primary: 255, 90, 120;
+    --secondary: 150, 50, 60;
+    width: 60px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    outline: 10px solid rgb(var(--primary), .5);
+    border-radius: 100%;
+    position: relative;
+    transition: .3s;
+  }
+  
+  .btn-class-name .back {
+    background: rgb(var(--secondary));
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .btn-class-name .front {
+    background: linear-gradient(0deg, rgba(var(--primary), .6) 20%, rgba(var(--primary)) 50%);
+    box-shadow: 0 .5em 1em -0.2em rgba(var(--secondary), .5);
+    border-radius: 100%;
+    position: absolute;
+    border: 1px solid rgb(var(--secondary));
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: inherit;
+    transform: translateY(-15%);
+    transition: .15s;
+    color: rgb(var(--secondary));
+  }
+  
+  .btn-class-name:active .front {
+    transform: translateY(0%);
+    box-shadow: 0 0;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+  }
+  
+  #timeRemaining {
+    animation: pulse 2s infinite;
+  }
