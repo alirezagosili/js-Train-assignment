@@ -40,6 +40,9 @@ const beginTimer = () => {
     }
 
     startTimer(adjustedMinutes, adjustedSeconds);
+
+    const startButton = document.getElementById('checkTimeBtn');
+    startButton.disabled = true;
 };
 
 const startTimer = (minutes, seconds) => {
@@ -50,6 +53,9 @@ const startTimer = (minutes, seconds) => {
             if (minutes === 0) {
                 clearInterval(timerInterval);
                 alert("Train arrived!");
+                
+                const startButton = document.getElementById('checkTimeBtn');
+                startButton.disabled = false;
                 return;
             } else {
                 minutes--;
