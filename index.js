@@ -13,7 +13,7 @@ const beginTimer = () => {
 
     if (now.day() === 6 || now.day() === 0) {
         interval = weekendInterval;
-        noticeMessage = "The Train departs every 10 minutes because today is a holiday.";
+        noticeMessage = "The Train departs every 10 minutes because today is a weekend.";
     } else {
         interval = weekdayInterval;
         noticeMessage = "The Train departs every 5 minutes because today is a weekday.";
